@@ -1,0 +1,46 @@
+@import "./variables";
+@import "./mixins";
+
+.header_wrapper{
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7px;
+    .header_menu{
+        display: flex;
+        align-items: center;
+        span{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: $black;
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            justify-content: center;
+            &:before{
+                position: absolute;
+                content: "";
+                width: 10px;
+                height: 10px;
+                display: block;
+                background: $black;
+                left: -18px;
+            }
+            &:after{
+                position: absolute;
+                content: "";
+                width: 0px;
+                height: 0px;
+                display: block;
+                left: 18px;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-bottom: 10px solid $black;
+            }
+        }
+    }
+}

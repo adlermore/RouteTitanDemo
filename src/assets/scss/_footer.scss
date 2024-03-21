@@ -1,0 +1,31 @@
+@import "./variables";
+@import "./mixins";
+
+.page_footer{
+    height: 56px;
+    display: flex;
+    background: $white;
+    z-index: 99;
+    position: relative;
+    align-items: center;
+    padding: 0 16px;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.63);
+    margin-top: -80px;
+    .router_line{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        a{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            color: #4D4D50;
+            &.active{
+                color: #1329FE;
+            }
+        }
+    }
+}

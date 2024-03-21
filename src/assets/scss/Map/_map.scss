@@ -1,0 +1,30 @@
+@import "../variables";
+@import "../mixins";
+
+.homepage{
+    flex: 1;
+}
+.map_container{
+    position: relative;
+    >div{
+        position: relative;
+    }
+}
+
+.default-marker {
+    font-size: 0;
+    svg{
+        display: none !important;
+    }
+    position: absolute;
+    width: 26px;
+    top: 0;
+    height: 60px;
+    background: url('../../img/marker.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &.completed{
+        background: url('../../img/markerFill.png') !important;
+    }
+}
